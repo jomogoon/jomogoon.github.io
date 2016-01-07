@@ -61,6 +61,47 @@ echo &#39;public&#39; &amp;gt;&amp;gt; .gitignore
 
 hugo server -w
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;커밋은 new/site/path/public 에 생성된 내용은 master 에, new/site/path 는 source 브런치에 커밋&lt;br /&gt;
+스크립트를 만들어 두면 편리&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;!/bin/bash
+
+echo -e &amp;quot;\033[0;32mDeploy change to http://jomogoon.github.io ...\033[0m&amp;quot;
+
+# Build
+hugo
+
+# Add changes
+git add -A
+
+# Create commit change
+msg=&amp;quot;rebuilding site `date`&amp;quot;
+if [ $# -eq 1 ]
+  then msg=&amp;quot;$1&amp;quot;
+fi
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Go to public
+cd public
+pwd
+
+# Push output to mater branch (blog)
+git push origin master
+
+
+echo -e &amp;quot;\033[0;32mDeploying updates to Github...\033[0m&amp;quot;
+
+# Get back to source
+cd ..
+pwd
+
+git add -A
+git commit -m &amp;quot;$msg&amp;quot;
+
+# Push blog source to source branch
+git push origin source
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
