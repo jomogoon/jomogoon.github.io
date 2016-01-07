@@ -10,12 +10,58 @@
     <atom:link href="http://jomogoon.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>http://jomogoon.github.io/2016/01/07/hugo/</link>
       <pubDate>Thu, 07 Jan 2016 22:24:46 +0900</pubDate>
       
       <guid>http://jomogoon.github.io/2016/01/07/hugo/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;올해 목표중의 하나인　기록(Log)하기 위해 블로그 개설&lt;br /&gt;
+요즘 유행하는 Static Site 생성툴인 Hugo로 스타트
+아래는 그 메모&lt;/p&gt;
+
+&lt;p&gt;휴고 설치&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew install hugo
+
+hugo new site new/site/path 
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;깃헙에 리포지토리 준비/등록&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[user id].github.io
+ 
+cd new/site/path 
+
+git init
+git add remote add origin git remote add origin git@github.com:&amp;lt;github_username&amp;gt;/&amp;lt;github_username&amp;gt;.github.io.git 
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;새 페이지 생성&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo new post/hello.md
+
+# edit contents
+vi contents/post/hello.md
+#:wq!
+
+#theme
+git clone https://github.com/theme-auther/name.git theme/name
+
+echo &#39;public&#39; &amp;gt;&amp;gt; .gitignore
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;로컬에서 확인 - &lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo
+
+hugo server -w
+&lt;/code&gt;&lt;/pre&gt;
+</description>
     </item>
     
     <item>

@@ -1,128 +1,83 @@
-
-<!DOCTYPE html>
-<html lang="ko-kr">
+<!doctype html> 
+<html lang="ko-kr"> 
 <head>
-
-  
-  <meta charset="UTF-8">
-  <title>
-    hugo | LifeLog
-  </title>
-
-
-  
-  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
-
-  
-  <link rel="canonical" href="http://jomogoon.github.io/2016/01/07/hugo/"/>
-
-  
-  <link rel="stylesheet" href="http://jomogoon.github.io/css/sanitize.css">
-  <link rel="stylesheet" href="http://jomogoon.github.io/css/responsive.css">
-  <link rel="stylesheet" href="http://jomogoon.github.io/css/highlight_monokai.css">
-  <link rel="stylesheet" href="http://jomogoon.github.io/css/theme.css">
-  <link rel="stylesheet" href="http://jomogoon.github.io/css/custom.css">
+  <meta charset="utf-8">
+  <title>LifeLog</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   
-  <link href="http://jomogoon.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="LifeLog" />
-  <link href="http://jomogoon.github.ioindex.xml" rel="feed" type="application/rss+xml" title="LifeLog" />
-
+  <link rel="icon" href="http://jomogoon.github.io/favicon.png" />
+  <link rel="apple-touch-icon-precomposed" href="http://jomogoon.github.io/apple-touch-icon.png" />
   
-  <script type="text/javascript">var switchTo5x=true;</script>
-  <script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "2b9fffc6-b3fe-4988-a0ef-4f9dcce98eaa", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
-
+  
+  <link rel="stylesheet" href="http://jomogoon.github.io/style.css" />
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
 
 </head>
-
-
-
 <body>
-<div class="container">
 
-  
-  <header role="banner">
-    <div class="row gutters">
-      <div id="site-title" class="col span_6">
-        <h1><a href="http://jomogoon.github.io">LifeLog</a></h1>
-        
-      </div>
-      <div id="social" class="col span_6">
-        <ul>
-          
-          
-          
-          
-        </ul>
-      </div>
-    </div>
-  </header>
+  <div class="wrap">
+    <header class="mb">
+      <h1 class="h2 m-0"><a href="http://jomogoon.github.io/">LifeLog</a></h1>
+      <p></p>
+    </header>
 
 
-  
-  <main id="single" role="main">
-    <div class="article-header">
-      <h1>hugo</h1>
-      <div class="meta">
-        Jan 7, 2016 &nbsp;
-        
-      </div>
-    </div>
-    <article>
-      
-      
-      
-      <div id="share-this" class="col span_10">
-        <span class='st_twitter_large' displayText='Tweet'></span>
-        <span class='st_facebook_large' displayText='Facebook'></span>
-        <span class='st_googleplus_large' displayText='Google +'></span>
-        <span class='st_pocket_large' displayText='Pocket'></span>
-        <span class='st_sharethis_large' displayText='ShareThis'></span>
-        <span class='st_email_large' displayText='Email'></span>  
-      </div>
-    </article>
-    
+<main>
+<article class="post">
+  <h1><a href="http://jomogoon.github.io/2016/01/07/hugo/" title="Hugo">Hugo</a></h1>
+  <p><strong>Hugo</strong></p>
 
+<p>올해 목표중의 하나인　기록(Log)하기 위해 블로그 개설<br />
+요즘 유행하는 Static Site 생성툴인 Hugo로 스타트
+아래는 그 메모</p>
 
-<script type="text/javascript">
-     
-    var disqus_shortname = '';
+<p>휴고 설치</p>
 
-     
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<pre><code>brew install hugo
 
-  </main>
-  
-  <nav class="pagination">
-    
-      <span class="previous">&larr; <a href="http://jomogoon.github.io/2016/01/05/log-2016/" rel="prev">Log 2016</a></span>
-    
-    
-  </nav>
+hugo new site new/site/path 
 
+</code></pre>
 
-  
-  <footer role="contentinfo">
-    <div style="text-align:center;">
-      
-      
-    </div>
-  </footer>
+<p>깃헙에 리포지토리 준비/등록</p>
 
+<pre><code>[user id].github.io
+ 
+cd new/site/path 
 
+git init
+git add remote add origin git remote add origin git@github.com:&lt;github_username&gt;/&lt;github_username&gt;.github.io.git 
+
+</code></pre>
+
+<p>새 페이지 생성</p>
+
+<pre><code>hugo new post/hello.md
+
+# edit contents
+vi contents/post/hello.md
+#:wq!
+
+#theme
+git clone https://github.com/theme-auther/name.git theme/name
+
+echo 'public' &gt;&gt; .gitignore
+
+</code></pre>
+
+<p>로컬에서 확인 - <a href="http://localhost:1313/">http://localhost:1313/</a></p>
+
+<pre><code>hugo
+
+hugo server -w
+</code></pre>
+
+  <p class="small gray"><time datetime="2016-01-07">Jan 07, 2016</time></p>
+</article>
+</main>
 </div>
-
-<script src="http://jomogoon.github.io/js/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-
 </body>
 </html>
-
