@@ -1,46 +1,66 @@
-<!doctype html> 
-<html lang="ko-kr"> 
+<!DOCTYPE html>
+<html lang="ko-kr">
 <head>
-  <meta charset="utf-8">
-  <title>LifeLog</title>
-  <meta name="author" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-  <link rel="icon" href="http://jomogoon.github.io/favicon.png" />
-  <link rel="apple-touch-icon-precomposed" href="http://jomogoon.github.io/apple-touch-icon.png" />
-  
-  
-  <link rel="stylesheet" href="http://jomogoon.github.io/style.css" />
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
-
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.15" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="http://jomogoon.github.io/css/normalize.css">
+<link rel="stylesheet" href="http://jomogoon.github.io/css/skeleton.css">
+<link rel="stylesheet" href="http://jomogoon.github.io/css/custom.css">
+<link rel="alternate" href="http://jomogoon.github.io/index.xml" type="application/rss+xml" title="LifeLog">
+<title>LifeLog</title>
 </head>
 <body>
 
-  <div class="wrap">
-    <header class="mb">
-      <h1 class="h2 m-0"><a href="http://jomogoon.github.io/">LifeLog</a></h1>
-      <p></p>
-    </header>
+<div class="container">
 
-<main class="posts">
-  <article class="post">
-    
-    <h1><a href="http://jomogoon.github.io/2016/01/07/hugo/">Hugo</a></h1>
-    <p>Hugo 올해 목표중의 하나인 기록(Log)하기 위해 블로그 개설 요즘 유행하는 Static Site 생성툴인 Hugo로 스타트 아래는 그 메모 휴고 설치 brew install hugo hugo new site new/site/path 깃헙에 리포지토리 준비/등록 [user id].github.io cd new/site/path git init git add remote add origin git remote add origin git@github.com:&lt;github_username&gt;/&lt;github_username&gt;.github.io.git 새 페이지 생성 hugo new post/hello.md # edit contents vi contents/post/hello.md #:wq! #theme git clone https://github.com/theme-auther/name.git theme/name echo 'public' &gt;&gt; .gitignore 로컬에서 확인 - http://localhost:1313/ hugo hugo server -w 커밋은 new/site/path/public 에 생성된 내용은 master 에, new/site/path 는 source 브런치에 커밋 스크립트를 만들어 두면 편리 !/bin/bash echo -e &quot;\033[0;32mDeploying updates to Github...\033[0m&quot; # Build hugo # Create commit change msg=&quot;rebuilding site `date`&quot; if [ $# -eq 1 ] then msg=&quot;$1&quot; fi # Push blog source to source branch git add -A git commit -m &quot;$msg&quot; git push origin source echo -e &quot;\033[0;32mDeploy change to http://jomogoon.github.io ...\033[0m&quot; # Go to public cd public # Push output to mater branch (blog) git add -A git commit -m &quot;$msg&quot; git push origin master cd ..</p>
-    <p class="small"><a href="http://jomogoon.github.io/2016/01/07/hugo/">Read More »</a></p>
-    
-    <h1><a href="http://jomogoon.github.io/2016/01/05/log-2016/">Log 2016</a></h1>
-    <p>2016 언제나 그렇지만 내 새로운 시작은 느리다. 올해는 간만에 일본에서(혼자) 보내는 신년이어서 인지 그 허함이 더했던 것 같다. 한편으로는 다행이기도 했지만 짧았던 연휴탓에 남들이 하는 &lsquo;지난 한해를 돌아보고 다가올 새해를 구상하는 시간&rsquo;은 보내지 못했다. 그래도 올해의 목표로 삼기로 한 것은 기록 이다. 나 자신을 좀 더 잘 알고 그걸 바탕으로 좀 더 나은 인간이 되어보자는 거다. 체중 Withings 체중계/앱 이용 목표는 70kg. 중간 목표는 77kg/2mon 식사량은 MyFitnesspal로 기록 체형 허리/엉덩이</p>
-    <p class="small"><a href="http://jomogoon.github.io/2016/01/05/log-2016/">Read More »</a></p>
-    
-    <h1><a href="http://jomogoon.github.io/2016/01/04/hello-world/">hello world</a></h1>
-    <p>Hello World!</p>
-    <p class="small"><a href="http://jomogoon.github.io/2016/01/04/hello-world/">Read More »</a></p>
-    
-  </article>
-</main>
+	<header role="banner">
+		<div class="header-logo">
+			<a href="http://jomogoon.github.io/"><img src="" width="60" height="60"></a>
+		</div>
+		<h1 class="site-title">LifeLog</h1>
+	</header>
+
+
+	<main role="main">
+
+		<article itemscope itemtype="http://schema.org/Blog">
+			<h2 class="entry-title" itemprop="headline"><a href="http://jomogoon.github.io/2016/01/07/hugo/">Hugo</a></h2>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2016-01-07">January 07, 2016</time></span>
+		</article>
+
+		<article itemscope itemtype="http://schema.org/Blog">
+			<h2 class="entry-title" itemprop="headline"><a href="http://jomogoon.github.io/2016/01/05/log-2016/">Log 2016</a></h2>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2016-01-05">January 05, 2016</time></span>
+		</article>
+
+		<article itemscope itemtype="http://schema.org/Blog">
+			<h2 class="entry-title" itemprop="headline"><a href="http://jomogoon.github.io/2016/01/04/hello-world/">hello world</a></h2>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2016-01-04">January 04, 2016</time></span>
+		</article>
+
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			
+			
+			
+			
+		</div>
+		<div class="copyright">Copyright &copy; </div>
+	</footer>
+
 </div>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 </body>
 </html>
