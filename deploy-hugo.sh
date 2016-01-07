@@ -15,15 +15,18 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
+cd public 
+pwd
+
 # Push source
 git push origin master
 
+cd ..
+pwd
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Back to source
-cd ..
-
 git push origin source
 
 
