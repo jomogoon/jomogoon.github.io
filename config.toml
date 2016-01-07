@@ -2,7 +2,8 @@ baseurl = "http://jomogoon.github.io"
 languageCode = "ko-kr"
 title = "LifeLog"
 paginate = 5
-theme = "heather-hugo"
+#theme = "heather-hugo"
+theme = "hugo-zen"
 canonifyurls = true
 author = "jomogoon"
 
