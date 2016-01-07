@@ -14,7 +14,7 @@ title = "Hugo"
 요즘 유행하는 Static Site 생성툴인 Hugo로 스타트
 아래는 그 메모  
 
-휴고 설치
+휴고 설치  
 ```
 brew install hugo
 
@@ -22,7 +22,7 @@ hugo new site new/site/path
 
 ```
 
-깃헙에 리포지토리 준비/등록
+깃헙에 리포지토리 준비/등록  
 ```
 [user id].github.io
  
@@ -33,7 +33,7 @@ git add remote add origin git remote add origin git@github.com:<github_username>
 
 ```
 
-새 페이지 생성
+새 페이지 생성  
 ```
 hugo new post/hello.md
 
@@ -56,8 +56,8 @@ hugo
 hugo server -w
 ```
 
-커밋은 new/site/path/public 에 생성된 내용은 master 에, new/site/path 는 source 브런치에 커밋  
-스크립트를 만들어 두면 편리
+커밋은 new/site/path/public 에 생성된 내용은 master 에, new/site/path 는 source 브런치에 커밋   
+스크립트를 만들어 두면 편리  
 ```
 !/bin/bash
 
