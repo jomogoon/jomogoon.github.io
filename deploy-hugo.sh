@@ -25,6 +25,8 @@ cd ..
 pwd
 
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
+git add -A
+git commit -m "$msg"
 
 # Back to source
 git push origin source
